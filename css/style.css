@@ -93,6 +93,11 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
 }
 
 .btn:hover {
@@ -128,13 +133,32 @@ body {
   padding-bottom: 32px;
 }
 
+.header-logo {
+  margin-right: 131px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
 .header-link,
 .header-tel {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  color: var(--main-color);
+  color: #ffffff;
 }
 
 /* .header-tel {
@@ -145,19 +169,31 @@ body {
   color: var(--main-color)
 } */
 
+.header-connect {
+  margin-left: auto;
+}
+
 .header-link:hover,
 .header-link:focus {
   color: #ff6c00;
 }
 
 .header-btn {
-  color: var(--main-color);
+  color: var(--main-btn-color);
+  margin-left: 40px;
 }
 
 /* -------------------HERO------------------ */
 
 .hero {
-  background-color: #7661ca;
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-list {
+  width: 100px;
 }
 
 .hero-link {
@@ -175,6 +211,8 @@ body {
 
 .hero-content {
   padding: 272px 100px 208px 100px;
+  background-color: #7661ca;
+  flex-grow: 1;
 }
 
 .hero-top-text {
@@ -201,6 +239,20 @@ body {
 }
 
 /* -------------------ABOUT------------------ */
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-content {
+  max-width: 470px;
+}
 
 .about-top-text {
   color: #303030;
@@ -233,6 +285,11 @@ body {
 .prices {
   background-color: #303030;
 }
+
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .prices-top-text {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: 20px;
@@ -244,8 +301,16 @@ body {
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
 }
 .prices-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 .prices-item-text {
   font-size: 18px;
@@ -315,9 +380,18 @@ body {
   margin-bottom: 44px;
 }
 .barbers-list {
+  display: flex;
+  gap: 30px;
+}
+
+.barbers-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .barbers-item {
+  width: calc((100% - 60px) / 3);
 }
 
 .barbers-item-content {
@@ -355,6 +429,18 @@ body {
 
 .gallery-top-text {
   color: #303030;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* column-gap: 30px;
+  row-gap: 50px; */
+  gap: 30px;
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
 }
 
 /* -------------------ONLINE------------------ */
