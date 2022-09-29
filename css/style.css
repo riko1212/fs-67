@@ -123,6 +123,16 @@ body {
   font-size: 11px;
   line-height: var(--typical-lh);
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-text::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
 }
 
 /* -------------------HEAdER------------------ */
@@ -228,6 +238,10 @@ body {
   margin-bottom: 20px;
 }
 
+.hero-top-text::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
 .hero-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -236,6 +250,25 @@ body {
   letter-spacing: 0.05em;
   color: #ffffff;
   margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.hero-title::before {
+  content: '\1F525';
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  /* background-image: url(../images/barbers-img-1.jpeg); */
+  background-size: cover;
+}
+
+.hero-title:hover::before {
+  color: green;
+}
+
+.hero-title::after {
+  content: '!';
 }
 
 .hero-bottom-text {
@@ -310,8 +343,15 @@ body {
   color: #ffffff;
   margin-bottom: 44px;
 }
+
+.prices-list:first-child {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list:last-child {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
 .prices-list {
-  border: 1px solid #ffffff;
   padding: 30px 20px;
   width: calc((100% - 30px) / 2);
 }
@@ -319,6 +359,15 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.prices-item::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
 }
 
 .prices-item:last-child {
@@ -330,6 +379,9 @@ body {
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+.prices-item-text:last-child {
+  order: 1;
+}
 .prices-btn {
   color: #ffffff;
   margin: 0 auto;
@@ -339,12 +391,37 @@ body {
 
 /* -------------------BENEFITS------------------ */
 
+.benefits-container {
+  display: flex;
+  padding-left: 100px;
+  gap: 130px;
+}
+
+.benefits-content {
+  max-width: 500px;
+  padding-top: 9px;
+}
+
+.benefits-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+}
+
 .benefits-item {
   width: 170px;
   height: 133px;
-  border: 1px solid #000000;
   padding: 20px 24px;
   text-align: center;
+  background-color: #f7f7f7;
+}
+
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .benefits-item span {
@@ -371,6 +448,7 @@ body {
 .benefits-title {
   color: var(--second-title-color);
   margin-bottom: 20px;
+  max-width: 430px;
 }
 
 .benefits-bottom-text {
@@ -478,9 +556,24 @@ body {
   width: calc((100% - 90px) / 4);
 }
 
+.contact-wrap {
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px) 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* -------------------ONLINE------------------ */
 .online {
-  background-color: #303030;
+  width: calc(50% - 15px);
 }
 
 .online-title {
@@ -489,15 +582,18 @@ body {
 /* -------------------CONTACTS------------------ */
 
 .contacts {
-  background-color: #303030;
+  width: calc(50% - 15px);
+  padding-left: 100px;
 }
 
 .contacts-title {
   color: var(--main-title-color);
+  margin-bottom: 40px;
 }
 
 .contacts-address {
   font-style: normal;
+  margin-bottom: 70px;
 }
 
 .contacts-address-link {
@@ -506,6 +602,12 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.contacts-item + .contacts-item {
+  margin-top: 20px;
 }
 
 .contacts-link {
@@ -521,6 +623,7 @@ body {
   line-height: var(--typical-lh);
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .contacts-schedule {
