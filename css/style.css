@@ -68,7 +68,6 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid red;
   margin: 0 auto;
 }
 
@@ -98,6 +97,7 @@ body {
   background-color: transparent;
   min-width: 160px;
   height: 40px;
+  transition: color 300ms linear, background-color 300ms linear;
 }
 
 .btn:hover {
@@ -138,7 +138,8 @@ body {
 /* -------------------HEAdER------------------ */
 
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -169,6 +170,10 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+}
+
+.header-link {
+  transition: color 300ms linear;
 }
 
 /* .header-tel {
@@ -202,8 +207,27 @@ body {
   display: flex;
 }
 
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  transform-origin: bottom left;
+  transform: rotate(-90deg) translateY(100%);
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-link {
@@ -484,6 +508,30 @@ body {
   width: calc((100% - 60px) / 3);
 }
 
+.barbers-item:hover .barbers-cover-text {
+  transform: translateY(0);
+}
+
+.barbers-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.barbers-cover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.6;
+  background-color: rgba(255, 106, 0, 0.521);
+  padding: 40px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+  overflow: auto;
+}
+
 .barbers-item-content {
   padding-top: 30px;
 }
@@ -516,19 +564,21 @@ body {
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  transition: background-color 300ms linear;
 }
 
 .barbers-soc-icon {
-  fill: currentColor;
-}
-
-.barbers-soc-link:hover,
-.barbers-soc-link:focus {
-  background-color: teal;
-  color: #7661ca;
+  fill: #ffffff;
+  transition: fill 300ms linear;
 }
 
 /* .barbers-soc-link:hover,
+.barbers-soc-link:focus {
+  background-color: teal;
+  color: #7661ca;
+} */
+
+.barbers-soc-link:hover,
 .barbers-soc-link:focus {
   background-color: teal;
 }
@@ -536,7 +586,7 @@ body {
 .barbers-soc-link:hover .barbers-soc-icon,
 .barbers-soc-link:focus .barbers-soc-icon {
   fill: rgb(255, 0, 183);
-} */
+}
 
 /* -------------------GALLERY------------------ */
 
@@ -654,4 +704,50 @@ body {
 .footer-link:hover,
 .footer-link:focus {
   color: #ff6c00;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #30303080;
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #909090;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
