@@ -476,13 +476,87 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-btn" data-modal-close>
           <svg class="modal-close-icon" width="18" height="18">
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title">Заголовок модального вікна</p>
+        <form>
+          <label>
+            <span class="modal-label-text">Введіть імя</span>
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              placeholder="Микола"
+              required
+            />
+          </label>
+          <div class="modal-field">
+            <label for="user-email" class="modal-label">Введіть пошту</label>
+            <input
+              type="email"
+              class="modal-input"
+              name="user-email"
+              placeholder="test@mail.com"
+              id="user-email"
+            />
+          </div>
+          <input
+            type="tel"
+            class="modal-input"
+            placeholder="+380 (96) 111-11-11"
+            name="user-tel"
+            required
+          />
+          <div class="modal-field">
+            <label for="user-text" class="modal-label">Введіть коментар</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-comment"
+              placeholder="Коммент"
+            ></textarea>
+          </div>
+
+          <fieldset>
+            <legend>Size</legend>
+            <label for="big">big</label>
+            <input type="radio" id="big" name="size" value="big" />
+            <label for="small">small</label>
+            <input type="radio" id="small" name="size" value="small" />
+          </fieldset>
+          <fieldset>
+            <legend>Size</legend>
+            <label for="big">big</label>
+            <input type="checkbox" id="big" name="size" value="big" checked />
+            <label for="small">small</label>
+            <input type="checkbox" id="small" name="size" value="small" />
+          </fieldset>
+
+          <select name="city" class="modal-input">
+            <option value="paris">Paris</option>
+            <option value="london">London</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+            <option value="noviy-rozdil">Novyi Rozdil</option>
+          </select>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
