@@ -422,6 +422,39 @@
         <div class="container contact-container">
           <section class="online section">
             <h2 class="online-title section-title">Online-booking</h2>
+
+            <form class="online-form">
+              <div class="online-input-wrap">
+                <input
+                  type="text"
+                  class="online-input online-item"
+                  name="online-name"
+                  id="online-name"
+                  placeholder=" "
+                />
+                <label for="online-name" class="online-label">Name*</label>
+              </div>
+              <div class="online-input-wrap">
+                <input
+                  type="tel"
+                  class="online-input online-item"
+                  name="online-tel"
+                  id="online-tel"
+                  placeholder=" "
+                />
+                <label for="online-tel" class="online-label">Phone*</label>
+              </div>
+              <div class="online-area-wrap">
+                <textarea
+                  name="online-mess"
+                  class="online-text online-item"
+                  placeholder=" "
+                  id="online-mess"
+                ></textarea>
+                <label for="online-mess" class="online-label">Message</label>
+              </div>
+              <button type="submit" class="btn online-btn">Send</button>
+            </form>
           </section>
           <section class="contacts section">
             <h2 class="contacts-title section-title">Contacts</h2>
@@ -476,7 +509,7 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-btn" data-modal-close>
           <svg class="modal-close-icon" width="18" height="18">
@@ -487,23 +520,33 @@
         <form>
           <label>
             <span class="modal-label-text">Введіть імя</span>
-            <input
-              type="text"
-              class="modal-input"
-              name="user-name"
-              placeholder="Микола"
-              required
-            />
+            <span class="input-wrap">
+              <input
+                type="text"
+                class="modal-input"
+                name="user-name"
+                placeholder="Микола"
+                required
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </span>
           </label>
           <div class="modal-field">
             <label for="user-email" class="modal-label">Введіть пошту</label>
-            <input
-              type="email"
-              class="modal-input"
-              name="user-email"
-              placeholder="test@mail.com"
-              id="user-email"
-            />
+            <div class="input-wrap">
+              <input
+                type="email"
+                class="modal-input"
+                name="user-email"
+                placeholder="test@mail.com"
+                id="user-email"
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
           <input
             type="tel"
@@ -521,41 +564,50 @@
               placeholder="Коммент"
             ></textarea>
           </div>
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              class="input-check visually-hidden"
+              name="privacy"
+              value="true"
+              id="privacy"
+            />
+            <label for="privacy" class="check-text">
+              <span>
+                <svg class="check-icon" width="16" height="15">
+                  <use href="./images/symbol-defs.svg#icon-che1"></use>
+                </svg>
+              </span>
+              Політика користування</label
+            >
+          </div>
 
-          <fieldset>
-            <legend>Size</legend>
-            <label for="big">big</label>
-            <input type="radio" id="big" name="size" value="big" />
-            <label for="small">small</label>
-            <input type="radio" id="small" name="size" value="small" />
-          </fieldset>
-          <fieldset>
-            <legend>Size</legend>
-            <label for="big">big</label>
-            <input type="checkbox" id="big" name="size" value="big" checked />
-            <label for="small">small</label>
-            <input type="checkbox" id="small" name="size" value="small" />
-          </fieldset>
-
-          <select name="city" class="modal-input">
-            <option value="paris">Paris</option>
-            <option value="london">London</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-            <option value="noviy-rozdil">Novyi Rozdil</option>
-          </select>
-          <button type="submit">Send</button>
+          <ul class="filter-list">
+            <li>
+              <input
+                type="radio"
+                name="filter"
+                id="all"
+                class="filter-btn visually-hidden"
+              /><label for="all" class="filter-text">All</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="filter"
+                id="aps"
+                class="filter-btn visually-hidden"
+              /><label for="aps" class="filter-text">Aps</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="filter"
+                id="design"
+                class="filter-btn visually-hidden"
+              /><label for="design" class="filter-text">Design</label>
+            </li>
+          </ul>
         </form>
       </div>
     </div>
