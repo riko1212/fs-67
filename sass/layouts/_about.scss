@@ -1,0 +1,39 @@
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-content {
+  max-width: 470px;
+}
+
+.about-top-text {
+  color: #303030;
+  margin-bottom: 20px;
+}
+.about-title {
+  color: #303030;
+  margin-bottom: 20px;
+}
+.about-bottom-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 42px;
+}
+.about-btn {
+  color: #303030;
+}
