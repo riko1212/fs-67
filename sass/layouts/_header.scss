@@ -5,27 +5,25 @@
   padding-bottom: 32px;
 }
 
-.header-logo {
+.navigation__logo {
   margin-right: 131px;
 }
 
-.header-navigation {
-  display: flex;
-  align-items: center;
+.navigation {
+  @extend %align-list;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
+.header__container {
+  @extend %align-list;
 }
 
-.header-list {
+.menu {
   display: flex;
   gap: 30px;
 }
 
-.header-link,
-.header-tel {
+.menu__link,
+.connect__tel {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -33,7 +31,7 @@
   color: #ffffff;
 }
 
-.header-link {
+.menu__link {
   transition: color 300ms linear;
   &:hover,
   &:focus {
@@ -49,11 +47,10 @@
   color: var(--main-color)
 } */
 
-.header-connect {
+.header__connect {
   margin-left: auto;
 }
 
-.header-btn {
-  color: var(--main-btn-color);
+.connect__btn {
   margin-left: 40px;
 }

@@ -1,9 +1,10 @@
 .btn {
   font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
+  @include font(600, 12px, 1.33, 0.09em);
+  // font-weight: 600;
+  // font-size: 12px;
+  // line-height: 1.33;
+  // letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
   border: 1px solid #ff6c00;
@@ -17,4 +18,12 @@
     background-color: var(--accent-color);
     color: var(--main-btn-color);
   }
+}
+
+.btn--light {
+  color: var(--main-btn-color);
+}
+
+.btn--dark {
+  color: var(--second-btn-color);
 }

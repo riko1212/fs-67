@@ -32,8 +32,7 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  display: flex;
-  align-items: center;
+  @extend %align-list;
   justify-content: center;
   padding: 0;
   cursor: pointer;
@@ -118,8 +117,7 @@
 .check-text {
   font-size: 14px;
   color: #909090;
-  display: flex;
-  align-items: center;
+  @extend %align-list;
   position: relative;
   span {
     width: 16px;
@@ -127,8 +125,7 @@
     border: 2px solid #111319;
     border-radius: 2px;
     margin-right: 5px;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
     fill: transparent;
     .input-check:checked + & {

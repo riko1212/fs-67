@@ -1,33 +1,27 @@
-.barbers-top-text {
+.barbers__top-text {
   color: #303030;
   margin-bottom: 20px;
 }
 
-.barbers-title {
+.barbers__title {
   color: var(--second-title-color);
   margin-bottom: 44px;
 }
-.barbers-list {
+.cards {
   display: flex;
   gap: 30px;
 }
 
-.barbers-soc-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.barbers-item {
+.cards__item {
   width: calc((100% - 60px) / 3);
 }
 
-.barbers-top-wrap {
+.cards__top-wrap {
   position: relative;
   overflow: hidden;
 }
 
-.barbers-cover-text {
+.cards__cover-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,16 +34,16 @@
   transform: translateY(100%);
   transition: transform 300ms linear;
   overflow: auto;
-  .barbers-item:hover & {
+  .cards__item:hover & {
     transform: translateY(0);
   }
 }
 
-.barbers-item-content {
+.cards__item-content {
   padding-top: 30px;
 }
 
-.barbers-item-title {
+.cards__item-title {
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -59,7 +53,7 @@
   margin-bottom: 8px;
 }
 
-.barbers-item-text {
+.cards__item-text {
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -68,13 +62,18 @@
   margin-bottom: 30px;
 }
 
-.barbers-soc-link {
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: tomato;
-  display: flex;
-  align-items: center;
+  @extend %align-list;
   justify-content: center;
   color: #ffffff;
   transition: background-color 300ms linear;
@@ -84,11 +83,11 @@
   }
 }
 
-.barbers-soc-icon {
+.socials__icon {
   fill: #ffffff;
   transition: fill 300ms linear;
-  .barbers-soc-link:hover &,
-  .barbers-soc-link:focus & {
+  .socials__link:hover &,
+  .socials__link:focus & {
     fill: rgb(255, 0, 183);
   }
 }

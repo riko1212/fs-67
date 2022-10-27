@@ -1,10 +1,10 @@
 .top-text {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: var(--typical-lh);
+  @include font(600, 11px, var(--typical-lh), 0.1em);
+  // font-weight: 600;
+  // font-size: 11px;
+  // line-height: var(--typical-lh);
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
+  @extend %align-list;
   gap: 20px;
   &::before {
     content: '';
