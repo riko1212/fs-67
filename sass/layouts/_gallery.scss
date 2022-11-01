@@ -6,11 +6,17 @@
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  /* column-gap: 30px;
-  row-gap: 50px; */
   gap: 30px;
 }
 
 .gallery-item {
-  width: calc((100% - 90px) / 4);
+  // width: calc((100% - 90px) / 4);
+  // width: 100%;
+  @include calc(2);
+  @media screen and (min-width: 768px) {
+    @include calc(3);
+  }
+  @media screen and (min-width: 1200px) {
+    @include calc(6);
+  }
 }
