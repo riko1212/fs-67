@@ -8,6 +8,9 @@
 .navigation__logo {
   margin-right: 131px;
 }
+.logo__icon {
+  fill: #ffffff;
+}
 
 .navigation {
   @extend %align-list;
@@ -18,7 +21,7 @@
 }
 
 .menu {
-  display: flex;
+  display: none;
   gap: 30px;
 }
 
@@ -49,8 +52,100 @@
 
 .header__connect {
   margin-left: auto;
+  display: none;
 }
 
 .connect__btn {
   margin-left: 40px;
+}
+
+.menu-open-btn {
+  margin-left: auto;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  > .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
+}
+.menu-close-btn {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  display: block;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-menu-list {
+  margin-bottom: 64px;
+}
+.mob-menu__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+
+  color: #303030;
+}
+
+.mob-connect {
+  margin-bottom: 64px;
+}
+.mob-connect__tel {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #303030;
+}
+.mob-connect__btn {
+  display: block;
+  margin-top: 24px;
+}
+
+.mob-soc {
+  position: relative;
+  padding-left: 100px;
+}
+
+.mob-soc::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  background-color: #303030;
+  left: 0;
+  top: 9px;
+}
+.mob-soc__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mob-soc__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  letter-spacing: 0.2em;
+
+  color: #303030;
 }

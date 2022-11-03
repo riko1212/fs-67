@@ -26,8 +26,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <a href="" class="logo">Web<span class="logo__part logo__part--dark">Studio</span> </a> -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo navigation__logo" href="">
@@ -66,8 +65,70 @@
             On
           </button>
         </div>
+        <button type="button" class="menu-open-btn" data-menu-open>O</button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu__top">
+            <button type="button" class="menu-close-btn" data-menu-close>
+              X
+            </button>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="./about.html">About</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="https://www.google.com/"
+                  >Services and prices</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="#barbers">Barbers</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="https://www.google.com/"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu__bottom">
+            <div class="mob-connect">
+              <a class="mob-connect__tel link" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+              <button
+                class="mob-connect__btn btn btn--dark"
+                data-modal-open
+                type="button"
+              >
+                On
+              </button>
+            </div>
+            <ul class="mob-soc list">
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="container hero__container">
@@ -621,5 +682,6 @@
       AOS.init();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
