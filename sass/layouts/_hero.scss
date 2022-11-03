@@ -1,13 +1,26 @@
 .hero__container {
   display: flex;
+  padding: 0;
+  width: 100%;
+  @include tablet {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 720px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 .soc {
-  width: 100px;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 27px;
-  padding-bottom: 40px;
+  display: none;
+  @include tablet {
+    width: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 27px;
+    padding-bottom: 40px;
+  }
 }
 
 .soc__list {
@@ -36,17 +49,31 @@
 }
 
 .hero__content {
-  padding: 272px 100px 208px 100px;
+  // padding: 272px 100px 208px 100px;
+  padding: 208px 31px;
   background-color: #7661ca;
-  background-image: linear-gradient(
-      rgba(25, 28, 38, 0.2),
-      rgba(25, 28, 38, 0.2)
-    ),
-    url(../images/hero-bg.jpeg);
+  background-image: var(--bg-gradient), url(../images/hero-bg-mob.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   flex-grow: 1;
+  @include retina {
+    background-image: var(--bg-gradient), url(../images/hero-bg-mob-2x.jpeg);
+  }
+  @include tablet {
+    padding: 272px 100px 237px;
+    background-image: var(--bg-gradient), url(../images/hero-bg-tab.jpeg);
+    @include retina {
+      background-image: var(--bg-gradient), url(../images/hero-bg-tab-2x.jpeg);
+    }
+  }
+  @include desktop {
+    padding: 272px 100px 208px 100px;
+    background-image: var(--bg-gradient), url(../images/hero-bg.jpeg);
+    @include retina {
+      background-image: var(--bg-gradient), url(../images/hero-bg-2x.jpeg);
+    }
+  }
 }
 
 .hero__top-text {
@@ -60,35 +87,50 @@
 .hero__title {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
+  font-size: 40px;
+  line-height: 1.17;
+
   letter-spacing: 0.05em;
   color: #ffffff;
   margin-bottom: 20px;
   display: flex;
   align-items: baseline;
-  &:hover {
-    &::before {
-      color: green;
-    }
+  @include mobile {
+    font-size: 48px;
   }
-  &::before {
-    content: '\1F525';
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
-    /* background-image: url(../images/barbers-img-1.jpeg); */
-    background-size: cover;
+  @include desktop {
+    font-size: 72px;
+    line-height: 1.18;
   }
-  &::after {
-    content: '!';
-  }
+  // &:hover {
+  //   &::before {
+  //     color: green;
+  //   }
+  // }
+
+  // &::before {
+  //   content: '\1F525';
+  //   font-size: 40px;
+  //   width: 40px;
+  //   height: 40px;
+  //   /* background-image: url(../images/barbers-img-1.jpeg); */
+  //   background-size: cover;
+  // }
+  // &::after {
+  //   content: '!';
+  // }
 }
 
 .hero__bottom-text {
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
   color: #9da4bd;
-  max-width: 360px;
+  // max-width: 360px;
+  max-width: 336px;
+  @include tablet {
+    max-width: 360px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }

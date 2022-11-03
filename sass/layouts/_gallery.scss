@@ -11,12 +11,12 @@
 
 .gallery-item {
   // width: calc((100% - 90px) / 4);
-  // width: 100%;
-  @include calc(2);
+  width: 100%;
+  // @include calc(2);
   @media screen and (min-width: 768px) {
-    @include calc(3);
+    @include calc(2);
   }
   @media screen and (min-width: 1200px) {
-    @include calc(6);
+    @include calc(4);
   }
 }
